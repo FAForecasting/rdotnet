@@ -1,6 +1,7 @@
 name: Publish NuGet Package
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - "v*.*.*"  # Triggers when a tag like v1.0.0 is pushed

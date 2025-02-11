@@ -28,6 +28,7 @@
     <ProjectReference Include="..\RDotNet.TestBase\RDotNet.TestBase.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="DynamicInterop2" Version="1.0.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
     <PackageReference Include="xunit" Version="2.9.3" />
   </ItemGroup>

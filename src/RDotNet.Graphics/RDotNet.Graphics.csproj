@@ -10,7 +10,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\R.NET\RDotNet.csproj" />
-    <ProjectReference Include="../../../dynamic-interop-dll/DynamicInterop/DynamicInterop.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="../Common/AssemblyInfo.cs" />
@@ -19,5 +18,8 @@
     <None Include="../../docs/img/logo.png" Pack="true" PackagePath="/">
         <PackageCopyToOutput>true</PackageCopyToOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DynamicInterop2" Version="1.0.1" />
   </ItemGroup>
 </Project>

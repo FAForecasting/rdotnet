@@ -6,6 +6,9 @@
     <ProjectGuid>{0923E1A0-2032-4997-AB73-49E42C4034A9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
+    <PackageId>rdotnet2</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Indicio Technologies AB</Authors>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <LangVersion>8</LangVersion>
   </PropertyGroup>

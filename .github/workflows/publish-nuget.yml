@@ -1,0 +1,28 @@
+name: Publish NuGet Package
+
+on:
+  push:
+    tags:
+      - "v*.*.*"  # Triggers when a tag like v1.0.0 is pushed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Build the project
+        run: dotnet build --configuration Release
+
+      - name: Pack the NuGet package
+        run: dotnet pack --configuration Release --output ./artifacts
+
+      - name: Publish to GitHub Packages
+        run: dotnet nuget push ./artifacts/*.nupkg --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" --api-key ${{ secrets.GITHUB_TOKEN }} --skip-duplicate
